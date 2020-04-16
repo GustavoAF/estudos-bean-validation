@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "defc8068-78f7-42b5-9d95-ddb077585ebc",
+		"name": "Collection - Curso Especialista Spring Rest - Bean Validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Listar Bean Validation Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Campo nome recebendo null -Pessoas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": null,\n    \"sobrenome\": \"Ferreira\",\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Campo nome recebendo \"\" -Pessoas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"\",\n    \"sobrenome\": \"Ferreira\",\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Campo sobrenome recebendo null -Pessoas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Gustavo\",\n    \"sobrenome\": null,\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Animal",
+			"item": [
+				{
+					"name": "Listar Bean Validation Animais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar  Qtde de Patas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 3,\n    \"qtdePatas\": 1,\n    \"especie\": \"Felino\",\n    \"valor\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar  valor negativo inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 3,\n    \"qtdePatas\": 4,\n    \"especie\": \"Felinos\",\n    \"valor\": -20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar espécie null",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 3,\n    \"qtdePatas\": 2,\n    \"especie\": null,\n    \"valor\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar multiplo Constraint nivel de field desenvolvida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 5,\n    \"qtdePatas\": 3,\n    \"especie\": \"Canina\",\n    \"valor\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar felino Constraint nivel de classe desenvolvida Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 5,\n    \"qtdePatas\": 2,\n    \"especie\": \"Felino\",\n    \"valor\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/estudos-bean-validation/v1/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"estudos-bean-validation",
+								"v1",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
